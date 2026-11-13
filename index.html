@@ -49,6 +49,7 @@ main section{padding-block:clamp(3.25rem,8vw,7rem);scroll-margin-top:1rem}h2{fon
 .audio-index .audio-time{font-size:.76rem;white-space:nowrap;text-align:right}
 .audio-controls{display:flex;flex-wrap:wrap;gap:.35rem .55rem;margin:.4rem 0 .6rem}.audio-controls :is(button,a){min-height:44px;padding:.35rem .55rem;font-size:.84rem;gap:.3rem}.audio-controls .secondary:hover{background:var(--mint)}#audio audio{display:block}#audio-status{margin:.4rem 0 0}#audio-status:empty{display:none}
 @media(max-width:360px){#audio{padding-inline:.75rem}.audio-controls{column-gap:.3rem}.audio-controls :is(button,a){padding-inline:.35rem}}
+#audio-status{position:absolute;width:1px;height:1px;margin:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}#audio-status:empty{display:block}
 </style>
 </head>
 <body>
