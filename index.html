@@ -334,8 +334,6 @@ audio.addEventListener('timeupdate', () => {
   }
 });
 document.querySelectorAll('[data-time]').forEach(button => button.addEventListener('click', () => {
-  audio.scrollIntoView({block: 'center'});
-  audio.focus({preventScroll:true});
   playFrom(Number(button.dataset.time), button.dataset.end ? Number(button.dataset.end) : null, button.textContent.trim());
 }));
 document.querySelector('#play-all').addEventListener('click', () => playFrom(0, null, ''));
