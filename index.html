@@ -19,11 +19,12 @@ main section{padding-block:clamp(3.25rem,8vw,7rem);scroll-margin-top:1rem}h2{fon
 @media(max-width:480px){.chapter,.chapter:nth-child(odd){grid-template-columns:1fr;gap:.8rem}.chapter:nth-child(odd) .chapter-mark{order:0;text-align:left}.chapter-mark{display:flex;align-items:baseline;gap:.55rem;font-size:2.35rem}.chapter-mark small{margin:0}.memory,.material-grid{grid-template-columns:1fr}.flow{gap:.5rem}.flow li{padding:.75rem}.top .brand{font-size:.88rem}.quiz fieldset{padding:.7rem}.hero-body{padding-top:4.2rem}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
 @media print{@page{margin:14mm}html,body{background:white;color:black;font-size:10pt}.wrap{width:100%;max-width:none}.top,.skip,.hero figure,.hero::after,.hero .button,.print,#infografia,#test,#materiales,.chapter-nav{display:none!important}.hero,.street,footer{background:white;color:black}.hero-body,main section,footer{padding:0}.hero .kicker,.hero .context,.street h3{color:black}h1{font-size:32pt}.hero .lead{font-size:17pt;max-width:none}h2{font-size:20pt}.chapters{display:block}.chapter,.chapter:nth-child(n){display:block;background:white;padding:.35rem 0;border:0;break-inside:avoid}.chapter-mark{display:none}.chapter h3{font-size:14pt}.street{padding:.5rem 0;margin-top:0;break-inside:avoid}.street blockquote{font-size:11pt}.memory{margin:.4rem 0;gap:.4rem}.memory li{background:white;padding:.3rem}.hero,.street,footer{break-inside:avoid}}
+.practice{background:var(--white)}.practice-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,22rem),1fr));gap:1rem;align-items:start}.panel{min-width:0;padding:clamp(1rem,4vw,2rem);background:var(--white);border:1px solid var(--line);border-radius:.55rem}.practice .panel{background:var(--paper)}.module-controls{display:flex;flex-wrap:wrap;gap:.55rem;margin:.85rem 0;align-items:center}.module-controls button[aria-pressed=true]{background:var(--deep);color:white}.speech{font:1.25rem/1.55 Georgia,serif;margin:1rem 0}.practice details{border-top:1px solid var(--line);padding:.65rem 0}.practice summary{cursor:pointer;font-weight:700;min-height:32px}.flash{max-width:52rem}.flash h3{font:clamp(1.35rem,4vw,2rem)/1.25 Georgia,serif}.flash-answer{padding:1rem;background:var(--mint)}.quiz .review{background:var(--white);color:var(--ink);padding:1rem;margin:1rem 0;border-radius:.4rem}.quiz .topic{color:var(--muted);font-size:.84rem;margin:0 0 .6rem}.audio-jumps{list-style:none;padding:0;margin:.5rem 0}.audio-jumps button{display:flex;width:100%;justify-content:space-between;text-align:left;margin:.25rem 0}.top ul{flex-wrap:wrap;column-gap:clamp(.55rem,1.8vw,1.5rem);row-gap:0}.top nav a{padding:.35rem 0}@media(max-width:560px){.top .wrap{align-items:center;padding:.25rem 0}.top ul{justify-content:flex-end}html{scroll-padding-top:8rem}}@media print{#calle,#tarjetas{display:none!important}}
 </style>
 </head>
 <body>
 <a class="skip" href="#resumen">Saltar al contenido</a>
-<div class="top"><div class="wrap"><a class="brand" href="#portada">Ágora</a><nav aria-label="Secciones"><ul><li><a href="#resumen">Capítulos</a></li><li><a href="#infografia">Esquema</a></li><li><a href="#test">Test</a></li><li><a href="#materiales">Materiales</a></li></ul></nav></div></div>
+<div class="top"><div class="wrap"><a class="brand" href="#portada">Ágora</a><nav aria-label="Secciones"><ul><li><a href="#resumen">Capítulos</a></li><li><a href="#infografia">Esquema</a></li><li><a href="#calle">Práctica</a></li><li><a href="#tarjetas">Tarjetas</a></li><li><a href="#test">Test</a></li><li><a href="#materiales">Materiales</a></li></ul></nav></div></div>
 <header class="hero" id="portada">
 <figure><img src="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/5000/5514/ISS010E23451_lrg.jpg" alt="Vista desde la Estación Espacial Internacional de la confluencia del Nilo Blanco y el Nilo Azul en Jartum" fetchpriority="high" referrerpolicy="no-referrer"><figcaption>Jartum, 2005 · <a href="https://science.nasa.gov/earth/earth-observatory/khartoum-sudan-5514/">NASA / JSC</a></figcaption></figure>
 <div class="wrap hero-body"><p class="kicker">Formación · 13 de noviembre de 2026</p><h1>Sudán 2026</h1><p class="lead">Detrás de cada cifra hay una vida</p><p class="context">Material de repaso de Ágora Fundraising a partir de la formación de Acción contra el Hambre.</p><a class="button" href="#resumen">Explorar la formación <span aria-hidden="true">↓</span></a></div>
@@ -43,19 +44,21 @@ main section{padding-block:clamp(3.25rem,8vw,7rem);scroll-margin-top:1rem}h2{fon
 <h2>Infografía</h2><figure style="margin:1rem 0"><a href="infografia-sudan.png"><img src="infografia-sudan.png" alt="Infografía Sudán 2026: Respuesta humanitaria y esperanza" loading="lazy" style="display:block;width:100%;max-width:48rem;height:auto"></a><figcaption><a href="infografia-sudan.png" download>Descargar infografía</a></figcaption></figure>
 <ol class="flow"><li><strong>Conflicto y desplazamiento.</strong> Las familias pueden perder su hogar, sus ingresos o sus cultivos.</li><li><strong>Menos acceso a servicios.</strong> Se dificulta conseguir alimentos, agua segura y atención sanitaria.</li><li><strong>Hambre y enfermedad.</strong> La desnutrición aumenta la vulnerabilidad a las infecciones, y las infecciones pueden empeorar el estado nutricional.</li><li><strong>Respuesta combinada.</strong> Los equipos acercan la atención nutricional, mejoran el acceso a agua segura y apoyan la recuperación de ingresos.</li></ol>
 </div></section>
+<section class="practice" id="calle"><div class="wrap"><h2>🎯 De la formación a la calle</h2><div class="practice-grid"><div class="panel"><h3>Ensaya tu discurso</h3><p>Duraciones orientativas. Adapta el discurso a tu ritmo.</p><div class="module-controls" id="durations" role="group" aria-label="Duración del discurso"><button class="secondary" type="button" data-speech="0" aria-pressed="true">20 segundos</button><button class="secondary" type="button" data-speech="1" aria-pressed="false">40 segundos</button><button class="secondary" type="button" data-speech="2" aria-pressed="false">60 segundos</button></div><blockquote class="speech" id="speech">¿Sabías que en Sudán millones de personas han tenido que huir de sus hogares? Acción contra el Hambre trata la desnutrición infantil y facilita agua potable. Buscamos socios para sostener ese trabajo. ¿Te puedo contar cómo funciona?</blockquote><button id="copy-speech" type="button">Copiar discurso</button><p id="copy-status" role="status"></p></div><div class="panel"><h3>Objeciones frecuentes</h3><details><summary>«Ya colaboro con otra ONG»</summary><p>Gracias por contármelo. Si te apetece, te puedo explicar en un momento qué hace Acción contra el Hambre en Sudán.</p></details><details><summary>«No tengo dinero»</summary><p>Lo entiendo. Gracias por escucharme. Si quieres conocer el trabajo, puedes consultar la información pública de la organización.</p></details><details><summary>«¿Por qué necesitan socios mensuales?»</summary><p>El apoyo regular permite planificar con más previsión y ayuda a mantener el trabajo cuando surgen nuevas emergencias.</p></details><details><summary>«¿Cómo sé que mi dinero llega?»</summary><p>Puedes consultar la información de transparencia, las memorias y las cuentas publicadas por Acción contra el Hambre. Si quieres saber cómo se asigna una aportación concreta, consultemos la información oficial antes de darlo por hecho.</p></details><details><summary>«¿Por qué no se soluciona esta crisis?»</summary><p>El conflicto, el desplazamiento y las restricciones de acceso dificultan la respuesta. La ayuda humanitaria puede atender necesidades urgentes y apoyar la recuperación. Resolver el conflicto requiere decisiones que van más allá de la labor de las ONG.</p></details></div></div><h3 style="margin-top:2rem">Qué decir y qué evitar</h3><div class="practice-grid"><div class="panel"><h4>Qué decir</h4><ul><li>En febrero de 2026, la OMS estimó que 33,7 millones de personas necesitaban ayuda.</li><li>ACH trata la desnutrición, facilita agua segura y apoya la recuperación de ingresos.</li><li>El apoyo regular ayuda a sostener la respuesta humanitaria.</li></ul></div><div class="panel"><h4>Qué evitar</h4><ul><li>Afirmar que todo Sudán está en hambruna.</li><li>Prometer que una cuota financia un tratamiento concreto o garantiza una recuperación.</li><li>Difundir historias personales sin permiso o insistir cuando alguien declina colaborar.</li></ul></div></div></div></section>
+<section class="band" id="tarjetas"><div class="wrap"><h2>Tarjetas de repaso</h2><div class="panel flash"><p id="card-progress" role="status"></p><h3 id="card-question" tabindex="-1"></h3><p id="card-answer" class="flash-answer" hidden></p><button type="button" id="flip" aria-controls="card-answer" aria-expanded="false">Ver respuesta</button><div class="module-controls"><button class="secondary" id="previous" type="button">Anterior</button><button class="secondary" id="next" type="button">Siguiente</button><button class="secondary" id="learned" type="button" aria-pressed="false">Marcar como aprendida</button></div><p id="card-state" role="status"></p><noscript>Activa JavaScript para usar las tarjetas.</noscript></div></div></section>
 <section class="quiz" id="test"><div class="wrap">
 <h2>Cuestionario de repaso</h2>
 <p class="section-intro">Responde las diez preguntas para ver tu puntuación y la explicación de cada respuesta.</p>
 <form id="quiz"><div class="progress-head"><label for="quiz-progress">Preguntas respondidas</label><strong id="progress-count" aria-live="polite">0 / 10</strong></div><progress class="meter" id="quiz-progress" max="10" value="0"></progress><div id="questions"></div>
 <p id="result" tabindex="-1" role="status" hidden></p>
-<div class="actions"><button type="submit">Corregir</button><button type="reset" class="secondary">Volver a empezar</button></div></form>
+<div class="review" id="review" hidden><button id="review-errors" type="button">Repasar mis errores</button><button id="retry-errors" type="button">Repetir solo las falladas</button><div id="recommendations" hidden tabindex="-1"></div></div><div class="actions"><button type="submit">Corregir</button><button type="reset" class="secondary">Repetir cuestionario completo</button></div></form>
 <noscript>Activa JavaScript para hacer el cuestionario.</noscript>
 </div></section>
 <section id="materiales"><div class="wrap">
 <h2>Materiales de la formación</h2>
 <!-- Para activar un material, copia su plantilla a la sección, añade src al visor o reproductor y href al enlace de descarga cuando corresponda. Usa una ruta relativa al archivo público autorizado. -->
 <div class="material-grid"><article id="presentacion"><p class="kicker">PDF</p><h3>Presentación de Acción contra el Hambre</h3><p class="pending">Pendiente de la presentación oficial para habilitar el visor y la descarga.</p></article>
-<article id="audio"><p class="kicker">Audio</p><h3>Grabación de audio</h3><p>Escucha la formación completa o consulta la transcripción y el resumen en Plaud.</p><audio controls preload="none" aria-label="Grabación de la formación sobre Sudán" src="formacion-sudan.mp3"></audio><p><a class="button" href="https://web.plaud.ai/s/pub_d9d7b2e2-6b72-4c88-84ea-ceeaad4440c8::bXgocam5SpJ6JWZ5mA3vW6DJgYr5qoQDOc89rqO22osqoRix_UZjqf88T4lhaSxj3AZReyv2bxrTBk8Zg5EC?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Transcripción y resumen en Plaud <span aria-hidden="true">↗</span></a></p></article>
+<article id="audio"><p class="kicker">Audio</p><h3>Grabación de audio</h3><p>Escucha la formación completa o consulta la transcripción y el resumen en Plaud.</p><audio controls preload="none" aria-label="Grabación de la formación sobre Sudán" src="formacion-sudan.mp3"></audio><details><summary>Capítulos del audio</summary><ul class="audio-jumps"><li><button class="secondary" type="button" data-time="250.64">Introducción a la crisis <span>04:10</span></button></li><li><button class="secondary" type="button" data-time="623.46">Nutrición en Kosti <span>10:23</span></button></li><li><button class="secondary" type="button" data-time="1294.51">Agua e higiene <span>21:34</span></button></li><li><button class="secondary" type="button" data-time="1776.07">Protección <span>29:36</span></button></li><li><button class="secondary" type="button" data-time="2245.59">Medios de vida <span>37:25</span></button></li><li><button class="secondary" type="button" data-time="2980.92">Dificultades operativas <span>49:40</span></button></li><li><button class="secondary" type="button" data-time="3521.72">Financiación y socios <span>58:41</span></button></li></ul><p id="audio-status" role="status"></p></details><p><a class="button" href="https://web.plaud.ai/s/pub_d9d7b2e2-6b72-4c88-84ea-ceeaad4440c8::bXgocam5SpJ6JWZ5mA3vW6DJgYr5qoQDOc89rqO22osqoRix_UZjqf88T4lhaSxj3AZReyv2bxrTBk8Zg5EC?utm_source=chatgpt.com" target="_blank" rel="noopener noreferrer">Transcripción y resumen en Plaud <span aria-hidden="true">↗</span></a></p></article>
 <article id="video"><p class="kicker">Vídeo</p><h3>Vídeo resumen</h3><p class="pending">Pendiente de la edición del vídeo resumen.</p></article>
 </div></div></section>
 <template id="pdf-player"><iframe title="Presentación oficial de ACH" height="550"></iframe><a download>Descargar presentación</a></template><template id="audio-player"><audio controls preload="none" aria-label="Grabación de la formación"></audio></template><template id="video-player"><video controls playsinline preload="none" aria-label="Vídeo de la formación"></video></template></main>
@@ -86,11 +89,21 @@ const feedback = [];
 const progress = document.querySelector("#quiz-progress");
 const progressCount = document.querySelector("#progress-count");
 const fields = [];
+const topics = ['Crisis', 'Nutrición', 'Nutrición', 'Nutrición', 'Agua', 'Medios de vida', 'Protección', 'Equipos locales', 'Acceso', 'Captación'];
+const relatedChapters = [1,2,2,2,3,4,4,5,5,5];
+const allQuestions = questions.map((_, index) => index);
+let activeQuestions = allQuestions;
+let mistakes = [];
+const review = document.querySelector('#review');
+const recommendations = document.querySelector('#recommendations');
 questions.forEach(([question, options], index) => {
   const field = document.createElement('fieldset');
   const legend = document.createElement('legend');
   legend.textContent = (index + 1) + '. ' + question;
-  field.append(legend);
+  const topic = document.createElement('p');
+  topic.className = 'topic';
+  topic.textContent = topics[index];
+  field.append(legend, topic);
   options.forEach((option, choice) => {
     const label = document.createElement('label');
     const input = document.createElement('input');
@@ -112,39 +125,158 @@ questions.forEach(([question, options], index) => {
 
 function clearResults() {
   result.hidden = true;
+  review.hidden = true;
+  recommendations.hidden = true;
   feedback.forEach(item => { item.hidden = true; });
-  container.querySelectorAll(".correct, .incorrect").forEach(label => label.classList.remove("correct", "incorrect"));
+  container.querySelectorAll('.correct, .incorrect').forEach(label => label.classList.remove('correct', 'incorrect'));
 }
 function updateProgress(count) {
+  progress.max = activeQuestions.length;
   progress.value = count;
-  progressCount.textContent = count + ' / ' + questions.length;
+  progressCount.textContent = count + ' / ' + activeQuestions.length;
+}
+function startQuestions(indices) {
+  activeQuestions = indices;
+  fields.forEach((field, index) => {
+    field.hidden = field.disabled = !indices.includes(index);
+    field.querySelectorAll('input').forEach(input => { input.checked = false; });
+  });
+  clearResults();
+  updateProgress(0);
+  fields[indices[0]].querySelector('input').focus();
 }
 form.addEventListener('change', () => {
   clearResults();
   updateProgress([...new FormData(form)].length);
 });
-form.addEventListener('reset', () => {
-  clearResults();
-  updateProgress(0);
+form.addEventListener('reset', event => {
+  event.preventDefault();
+  startQuestions(allQuestions);
 });
 form.addEventListener('submit', event => {
   event.preventDefault();
+  clearResults();
   const answers = new FormData(form);
-  let score = 0;
-  questions.forEach(([, options, correct, explanation], index) => {
-    const match = answers.get('q' + index) === String(correct);
-    if (match) score++;
-    const labels = fields[index].querySelectorAll("label");
-    labels[correct].classList.add("correct");
-    if (!match) labels[Number(answers.get("q" + index))].classList.add("incorrect");
-    const message = match ? 'Correcta. ' : 'Respuesta correcta: ' + options[correct] + ' ';
+  mistakes = [];
+  activeQuestions.forEach(index => {
+    const [, options, correct, explanation] = questions[index];
+    const selected = Number(answers.get('q' + index));
+    const match = selected === correct;
+    const labels = fields[index].querySelectorAll('label');
+    labels[correct].classList.add('correct');
+    if (!match) {
+      mistakes.push(index);
+      labels[selected].classList.add('incorrect');
+    }
+    const message = match ? 'Correcta. ' : 'Incorrecta. Respuesta correcta: ' + options[correct] + ' ';
     feedback[index].textContent = message + explanation;
     feedback[index].hidden = false;
   });
-  result.textContent = 'Puntuación: ' + score + ' de ' + questions.length + '.';
+  result.textContent = 'Puntuación: ' + (activeQuestions.length - mistakes.length) + ' de ' + activeQuestions.length + '.';
   result.hidden = false;
+  review.hidden = mistakes.length === 0;
   result.focus();
 });
+document.querySelector('#review-errors').addEventListener('click', () => {
+  recommendations.replaceChildren();
+  const heading = document.createElement('h3');
+  heading.textContent = 'Preguntas para repasar';
+  recommendations.append(heading);
+  const list = document.createElement('ul');
+  mistakes.forEach(index => {
+    const item = document.createElement('li');
+    const link = document.createElement('a');
+    const chapter = document.querySelector('#capitulo-' + relatedChapters[index] + ' h3');
+    link.href = '#capitulo-' + relatedChapters[index];
+    link.textContent = chapter.textContent;
+    item.append('Pregunta ' + (index + 1) + ' · ' + topics[index] + ' · ', link);
+    list.append(item);
+  });
+  recommendations.append(list);
+  recommendations.hidden = false;
+  recommendations.focus();
+});
+document.querySelector('#retry-errors').addEventListener('click', () => startQuestions(mistakes));
+
+const speeches = ["¿Sabías que en Sudán millones de personas han tenido que huir de sus hogares? Acción contra el Hambre trata la desnutrición infantil y facilita agua potable. Buscamos socios para sostener ese trabajo. ¿Te puedo contar cómo funciona?","Desde abril de 2023, la guerra en Sudán ha obligado a millones de personas a dejar sus hogares. Muchas familias tienen dificultades para conseguir alimentos, agua potable o atención sanitaria. Acción contra el Hambre trata la desnutrición infantil, mejora el acceso a agua segura y apoya a las familias para que recuperen sus medios de vida. El apoyo continuado de los socios ayuda a mantener la respuesta y a actuar cuando hay emergencias. Si te interesa, te explico cómo colaborar.","En Sudán, la guerra ha obligado a millones de personas a abandonar sus hogares. Imagínate tener que salir dejando atrás tu trabajo o tus cultivos y encontrar que también cuesta acceder a un centro de salud. En la formación vimos cómo responde Acción contra el Hambre. En Kosti, los equipos detectan y tratan la desnutrición infantil. También conocimos una comunidad donde se instaló un sistema de bombeo solar para extraer, tratar y distribuir agua segura. Y vimos el caso de una costurera que recibió apoyo económico y formación para ampliar su pequeño negocio. Son ejemplos de cómo se puede atender una urgencia y ayudar a las familias a recuperar ingresos. Buscamos socios porque su apoyo continuado ayuda a sostener ese trabajo. Si quieres saber más, podemos revisar juntos cómo colaborar."];
+const speech = document.querySelector('#speech');
+const copyStatus = document.querySelector('#copy-status');
+const durationButtons = document.querySelectorAll('[data-speech]');
+durationButtons.forEach(button => button.addEventListener('click', () => {
+  durationButtons.forEach(option => option.setAttribute('aria-pressed', String(option === button)));
+  speech.textContent = speeches[Number(button.dataset.speech)];
+  copyStatus.textContent = '';
+}));
+document.querySelector('#copy-speech').addEventListener('click', async () => {
+  try {
+    await navigator.clipboard.writeText(speech.textContent);
+    copyStatus.textContent = 'Discurso copiado.';
+  } catch {
+    copyStatus.textContent = 'Selecciona el texto del discurso y cópialo manualmente.';
+  }
+});
+
+const cards = [["¿Cuándo comenzó la guerra actual?","En abril de 2023."],["¿Cuántas personas necesitaban ayuda según el análisis de la OMS de febrero de 2026?","33,7 millones. Acompaña siempre la cifra de su fecha y su fuente."],["¿Cómo agrava el hambre el desplazamiento?","Huir puede implicar perder ingresos, tierras y acceso a mercados y servicios."],["¿Qué hace el centro de estabilización de Kosti?","Atiende casos de desnutrición infantil. Los casos con complicaciones necesitan atención clínica."],["¿Qué mide la cinta MUAC?","El perímetro de la parte superior del brazo. Ayuda a detectar el riesgo de desnutrición."],["¿Para qué se usa Plumpy’Nut?","Es un alimento terapéutico que puede formar parte del tratamiento según la evaluación clínica."],["¿Por qué es importante el agua potable?","El agua segura y la higiene reducen el riesgo de enfermedades asociadas al agua contaminada."],["¿Qué función cumplen los paneles solares en el sistema mostrado?","Suministran energía para bombear el agua. El sistema también la trata y distribuye."],["¿Qué ejemplo de protección se explicó?","Los espacios de apoyo psicosocial para mujeres desplazadas."],["¿Cómo puede ayudar ACH a recuperar ingresos?","Puede combinar apoyo inicial y formación, como en el ejemplo del pequeño negocio de costura."],["¿Qué aporta el personal local?","Conoce el contexto y las lenguas de las comunidades, lo que ayuda a adaptar la respuesta."],["¿Qué dificulta la logística humanitaria?","La inseguridad, los permisos y las restricciones de movimiento pueden retrasar el acceso y el transporte."],["¿Qué aporta el apoyo regular de los socios?","Ayuda a sostener el trabajo humanitario y a responder a emergencias."]];
+const storageKey = 'sudan-2026-tarjetas-v1';
+let learned = new Set();
+try {
+  const saved = JSON.parse(localStorage.getItem(storageKey) || '[]');
+  if (Array.isArray(saved)) learned = new Set(saved.filter(index => Number.isInteger(index) && index >= 0 && index < cards.length));
+} catch {}
+let cardIndex = 0;
+const cardQuestion = document.querySelector('#card-question');
+const cardAnswer = document.querySelector('#card-answer');
+const flip = document.querySelector('#flip');
+const learnedButton = document.querySelector('#learned');
+const cardState = document.querySelector('#card-state');
+function renderCard() {
+  const [question, answer] = cards[cardIndex];
+  cardQuestion.textContent = question;
+  cardAnswer.textContent = answer;
+  cardAnswer.hidden = true;
+  flip.textContent = 'Ver respuesta';
+  flip.setAttribute('aria-expanded', 'false');
+  document.querySelector('#card-progress').textContent = 'Tarjeta ' + (cardIndex + 1) + ' de ' + cards.length + ' · ' + learned.size + ' aprendidas';
+  const done = learned.has(cardIndex);
+  learnedButton.setAttribute('aria-pressed', String(done));
+  learnedButton.textContent = done ? 'Marcar como pendiente' : 'Marcar como aprendida';
+  cardState.textContent = done ? 'Aprendida' : 'Pendiente de repaso';
+}
+flip.addEventListener('click', () => {
+  cardAnswer.hidden = !cardAnswer.hidden;
+  flip.setAttribute('aria-expanded', String(!cardAnswer.hidden));
+  flip.textContent = cardAnswer.hidden ? 'Ver respuesta' : 'Ocultar respuesta';
+});
+function moveCard(step) {
+  cardIndex = (cardIndex + step + cards.length) % cards.length;
+  renderCard();
+  cardQuestion.focus();
+}
+document.querySelector('#previous').addEventListener('click', () => moveCard(-1));
+document.querySelector('#next').addEventListener('click', () => moveCard(1));
+learnedButton.addEventListener('click', () => {
+  if (learned.has(cardIndex)) learned.delete(cardIndex);
+  else learned.add(cardIndex);
+  renderCard();
+  try {
+    localStorage.setItem(storageKey, JSON.stringify([...learned]));
+  } catch {
+    cardState.textContent += ' · El navegador no permite conservar el progreso al cerrar la página.';
+  }
+});
+renderCard();
+
+const audio = document.querySelector('#audio audio');
+const audioStatus = document.querySelector('#audio-status');
+document.querySelectorAll('[data-time]').forEach(button => button.addEventListener('click', async () => {
+  try {
+    audio.currentTime = Number(button.dataset.time);
+    await audio.play();
+    audioStatus.textContent = 'Reproduciendo desde ' + button.querySelector('span').textContent + '.';
+  } catch {
+    audioStatus.textContent = 'Pulsa reproducir en el reproductor para iniciar el audio.';
+  }
+}));
 </script>
 </body>
 </html>
