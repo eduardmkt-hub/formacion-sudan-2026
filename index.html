@@ -6,53 +6,64 @@
 <meta name="description" content="Material de repaso para captadores sobre la crisis humanitaria en Sudán y la respuesta de Acción contra el Hambre.">
 <title>Ágora × Acción contra el Hambre · Sudán 2026</title>
 <style>
-:root{color-scheme:light;--ink:#182b30;--paper:#f8f5ec;--green:#12483c;--line:#d4d9cd;--muted:#455a53}
-*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:1.06rem/1.6 system-ui,sans-serif}a{color:#115747;text-underline-offset:.2em}a:focus-visible,button:focus-visible,input:focus-visible{outline:3px solid #996009;outline-offset:4px}.wrap{width:min(100% - 2rem,54rem);margin:auto}header{background:var(--green);color:#fff;padding:clamp(2.5rem,8vw,6rem) 0 2.5rem}h1{font-size:clamp(2.4rem,8vw,5rem);line-height:1.03;margin:.35em 0}h2{font-size:clamp(1.75rem,4vw,2.5rem);line-height:1.2}h3{line-height:1.3}nav ul{display:flex;flex-wrap:wrap;gap:.35rem 1.25rem;padding:0;list-style:none}nav a{display:inline-block;padding:.5rem 0;color:white}main section{padding:1.2rem 0 2rem;border-bottom:1px solid var(--line)}article,fieldset{background:white;border:1px solid var(--line);border-radius:.6rem;padding:1rem 1.25rem;margin:1rem 0;min-width:0}article h3{margin:.2rem 0 .4rem}article p{margin:.4rem 0}.flow{padding-left:1.5rem;display:grid;gap:.6rem}.flow li{padding:.5rem;background:#e6eee5}.pending{color:var(--muted)}legend{font-weight:700;max-width:100%}label{display:flex;align-items:baseline;gap:.55rem;padding:.45rem 0;cursor:pointer}input{accent-color:var(--green);flex:none}button{font:inherit;font-weight:700;cursor:pointer;border:2px solid var(--green);border-radius:.4rem;padding:.55rem .9rem;background:var(--green);color:white}button[type=reset]{background:white;color:var(--green)}.feedback{border-left:4px solid var(--green);padding-left:.7rem}.actions{display:flex;gap:.6rem;flex-wrap:wrap}footer{padding:1.3rem 0 2rem} [hidden]{display:none!important}
-@media print{header{background:white;color:black;padding:0}.wrap{width:100%}nav,#infografia,#test,#materiales,.print{display:none}article{break-inside:avoid}body{background:white}} iframe,audio,video{width:100%;max-width:100%}</style>
+:root{color-scheme:light;--ink:#102d2b;--deep:#0c2524;--paper:#f4f1e8;--white:#fffdfa;--mint:#d8ece0;--accent:#f2d087;--line:#b8c8bf;--muted:#435b55}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:6rem}body{margin:0;background:var(--paper);color:var(--ink);font:1rem/1.65 "Segoe UI",system-ui,sans-serif}a{color:inherit;text-underline-offset:.22em}button,input{font:inherit}button,a,input{touch-action:manipulation}a:focus-visible,button:focus-visible,input:focus-visible,[tabindex]:focus-visible{outline:3px solid #aa5b11;outline-offset:4px}.skip{position:absolute;top:0;left:1rem;z-index:20;background:white;padding:.6rem;transform:translateY(-140%)}.skip:focus{transform:none}
+.wrap{width:min(calc(100% - 3rem),72rem);margin-inline:auto}.top{position:sticky;top:0;z-index:5;background:var(--deep);color:#fff;border-bottom:1px solid #38524d}.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:4rem}.brand{text-decoration:none;font-weight:800;letter-spacing:.02em}.top ul{display:flex;gap:clamp(.75rem,2.7vw,2rem);list-style:none;margin:0;padding:0}.top nav a{display:block;padding:.6rem 0;color:#ecf5ee;text-decoration:none;font-weight:650}.top nav a:hover{text-decoration:underline}
+.hero{position:relative;isolation:isolate;overflow:hidden;background:#193934;color:white}.hero figure{position:absolute;inset:0;margin:0;z-index:-1}.hero img{width:100%;height:100%;object-fit:cover;object-position:65% 52%}.hero::after{content:"";position:absolute;inset:0;z-index:-1;background:linear-gradient(90deg,#091e1df5 0%,#0a211ed9 39%,#0a211e42 100%),linear-gradient(0deg,#0a211ee8,transparent 42%)}.hero-body{padding-block:clamp(4rem,11vw,9rem) 4.8rem}.kicker{font-weight:750;text-transform:uppercase;letter-spacing:.12em;font-size:.75rem}.hero .kicker{color:var(--accent)}h1,h2{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.035em;line-height:1.03}h1{font-size:clamp(3.8rem,12vw,10rem);margin:.12em 0}.hero .lead{font:clamp(1.6rem,4vw,3.2rem)/1.1 Georgia,serif;max-width:17ch;margin:.1em 0 .6em}.hero .context{max-width:38ch;color:#eaf4ec}.hero figcaption{position:absolute;bottom:.75rem;right:1rem;color:#fff;font-size:.75rem;background:#0a211ed9;padding:.25rem .55rem;border-radius:.15rem}.button,button{display:inline-flex;align-items:center;justify-content:center;gap:.5rem;min-height:44px;padding:.55rem 1rem;border-radius:.3rem;border:1px solid var(--deep);background:var(--deep);color:white;text-decoration:none;font-weight:750;cursor:pointer;transition:background-color .18s,color .18s}.button:hover,button:hover{background:#28544e}.hero .button{background:var(--accent);color:#182c25;border-color:var(--accent);margin-top:.65rem}.hero .button:hover{background:#ffe3a5}.secondary{background:transparent;color:var(--deep)}.secondary:hover{background:var(--mint)}
+main section{padding-block:clamp(3.25rem,8vw,7rem);scroll-margin-top:1rem}h2{font-size:clamp(2.35rem,6vw,5rem);margin:.15em 0 .55em}h3{line-height:1.2;margin:0 0 .6rem}p{margin:.4em 0 .8em}.section-intro{max-width:55ch;color:var(--muted)}.chapter-nav{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.5rem 0 2rem;padding:0;list-style:none}.chapter-nav a{display:block;padding:.45rem .75rem;border:1px solid var(--line);border-radius:2rem;background:var(--white);text-decoration:none;font-weight:650}.chapter-nav a:hover{background:var(--mint)}.chapters{display:grid;gap:1rem}.chapter{display:grid;grid-template-columns:minmax(7rem,1fr) minmax(0,3fr);gap:clamp(1rem,4vw,3rem);align-items:center;padding:clamp(1.15rem,4vw,2.4rem);background:var(--white);border-top:3px solid var(--tone,#416a5d);scroll-margin-top:1rem}.chapter:nth-child(2){--tone:#957133;background:#f3e8cf}.chapter:nth-child(3){--tone:#326a78;background:#e0edf0}.chapter:nth-child(4){--tone:#4b7760;background:#e2eee5}.chapter:nth-child(5){--tone:#8e6452;background:#f1e4dc}.chapter h3{font:clamp(1.5rem,3vw,2.4rem)/1.12 Georgia,serif}.chapter p{max-width:63ch}.chapter-mark{color:var(--tone,#416a5d);font:clamp(3rem,8vw,6rem)/.9 Georgia,serif;letter-spacing:-.05em}.chapter-mark small{display:block;font:750 .7rem/1.4 system-ui,sans-serif;letter-spacing:.11em;text-transform:uppercase;margin-top:.7rem}.chapter:nth-child(odd) .chapter-mark{order:2;text-align:right}.chapter:nth-child(odd){grid-template-columns:minmax(0,3fr) minmax(7rem,1fr)}
+.stat{display:grid;margin:.8rem 0 1rem}.stat strong{font:clamp(2rem,5vw,3.6rem)/1 Georgia,serif;letter-spacing:-.04em}.stat span{color:var(--muted);font-size:.9rem}.street{margin-top:2.5rem;padding:clamp(1.25rem,5vw,3.5rem);background:var(--deep);color:white}.street blockquote{margin:0;max-width:58ch;font:clamp(1.25rem,2.6vw,2rem)/1.45 Georgia,serif}.street h3{color:var(--accent)}.memory{margin:2rem 0;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem;padding:0;list-style:none}.memory li{padding:1rem;border-top:2px solid #52766a;background:var(--white)}.memory strong{display:block}
+.band{background:#dce9e0}.flow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.75rem;list-style:none;padding:0;margin:1.75rem 0 0;counter-reset:flow}.flow li{padding:1rem;background:var(--white);border-top:3px solid #4d7667;counter-increment:flow}.flow li::before{content:"0" counter(flow);display:block;color:var(--muted);font-weight:800;font-size:.8rem;margin-bottom:.45rem}.flow strong{display:block}
+.quiz{background:#102e2b;color:white}.quiz .section-intro{color:#d7e8e0}.quiz form{max-width:54rem}.progress-head{display:flex;align-items:center;justify-content:space-between;gap:1rem;color:white;margin-top:1.5rem}.progress-head strong{font-variant-numeric:tabular-nums}.meter{display:block;width:100%;height:.55rem;margin:.5rem 0 1.8rem;accent-color:var(--accent)}.quiz fieldset{position:relative;margin:0 0 1.3rem;padding:1.1rem;border:1px solid #b5c6be;border-radius:.55rem;min-width:0;background:var(--white);color:var(--ink)}.quiz legend{display:table;max-width:100%;padding:.25rem .6rem;background:var(--white);color:var(--ink);border-radius:.25rem;font-weight:800;line-height:1.35}.quiz fieldset label{display:grid;grid-template-columns:auto 1fr;align-items:baseline;gap:.65rem;min-height:44px;padding:.58rem .7rem;margin:.35rem 0;border:1px solid var(--line);border-radius:.35rem;cursor:pointer}.quiz fieldset label:hover,.quiz fieldset label:focus-within{background:#edf4ed}.quiz label:has(:checked){background:#d7ecdf;border-color:#305c4f;box-shadow:inset 0 0 0 1px #305c4f}.quiz input{accent-color:#21584a;margin:0}.quiz label.correct{background:#d6ecd9;border-color:#286348}.quiz label.incorrect{background:#f7e4dc;border-color:#9f4c36}.feedback{border-left:3px solid #326454;background:#edf4ed;padding:.7rem .8rem;margin:.75rem 0 0}.actions{display:flex;flex-wrap:wrap;gap:.6rem}.quiz button[type=submit]{color:var(--deep);background:var(--accent);border-color:var(--accent)}.quiz button[type=reset]{color:white;border-color:#b5c6be}.quiz button:hover{filter:brightness(1.1)}#result{padding:.8rem 1rem;background:var(--accent);color:var(--deep);border-radius:.35rem;font-weight:800}
+.material-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}.material-grid article{background:var(--white);border:1px solid var(--line);padding:1.25rem}.material-grid .kicker{color:#466457}.pending{color:var(--muted)}iframe,audio,video{width:100%;max-width:100%}footer{padding-block:2.5rem;background:#e5e8df;font-size:.95rem}footer h2{font-size:2rem}footer li{margin:.4rem 0}[hidden]{display:none!important}
+@media(max-width:700px){.wrap{width:calc(100% - 2rem)}.flow,.material-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero::after{background:linear-gradient(90deg,#091e1de8,#0a211e64),linear-gradient(0deg,#0a211ee8,transparent 40%)}.hero figcaption{left:1rem;right:auto}.top .wrap{gap:.5rem}.top ul{gap:.8rem}.top nav a{font-size:.84rem}}
+@media(max-width:480px){.chapter,.chapter:nth-child(odd){grid-template-columns:1fr;gap:.8rem}.chapter:nth-child(odd) .chapter-mark{order:0;text-align:left}.chapter-mark{display:flex;align-items:baseline;gap:.55rem;font-size:2.35rem}.chapter-mark small{margin:0}.memory,.material-grid{grid-template-columns:1fr}.flow{gap:.5rem}.flow li{padding:.75rem}.top .brand{font-size:.88rem}.quiz fieldset{padding:.7rem}.hero-body{padding-top:4.2rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{transition:none!important}}
+@media print{@page{margin:14mm}html,body{background:white;color:black;font-size:10pt}.wrap{width:100%;max-width:none}.top,.skip,.hero figure,.hero::after,.hero .button,.print,#infografia,#test,#materiales,.chapter-nav{display:none!important}.hero,.street,footer{background:white;color:black}.hero-body,main section,footer{padding:0}.hero .kicker,.hero .context,.street h3{color:black}h1{font-size:32pt}.hero .lead{font-size:17pt;max-width:none}h2{font-size:20pt}.chapters{display:block}.chapter,.chapter:nth-child(n){display:block;background:white;padding:.35rem 0;border:0;break-inside:avoid}.chapter-mark{display:none}.chapter h3{font-size:14pt}.street{padding:.5rem 0;margin-top:0;break-inside:avoid}.street blockquote{font-size:11pt}.memory{margin:.4rem 0;gap:.4rem}.memory li{background:white;padding:.3rem}.hero,.street,footer{break-inside:avoid}}
+</style>
 </head>
 <body>
-<header><div class="wrap">
-<p>Ágora × Acción contra el Hambre</p>
-<h1>Sudán 2026</h1><p><strong>Detrás de cada cifra hay una vida</strong></p>
-<p>Repaso para captadores · Formación del 13 de noviembre de 2026</p>
-<nav aria-label="Secciones"><ul><li><a href="#resumen">Resumen</a></li><li><a href="#infografia">Infografía</a></li><li><a href="#test">Cuestionario</a></li><li><a href="#materiales">Materiales</a></li></ul></nav>
-</div></header>
-<main class="wrap">
-<section id="resumen">
-<h2>Resumen de la formación</h2>
-<article><h3>1. ¿Qué está pasando en Sudán?</h3><p>Sudán lleva en guerra desde abril de 2023. Según el análisis de la OMS de febrero de 2026, <strong>33,7 millones de personas necesitan ayuda</strong>. Millones han tenido que huir, dejando atrás hogares, trabajos y tierras. Muchas familias también tienen dificultades para conseguir agua segura y atención médica.</p></article>
-<article><h3>2. ¿Cómo ayuda ACH a los niños con desnutrición?</h3><p>En la formación conocimos el centro de estabilización de Kosti. Los equipos usan una cinta que mide el perímetro del brazo para ayudar a detectar la desnutrición. Según la evaluación, pueden utilizar alimentos terapéuticos como Plumpy’Nut. Los casos con complicaciones necesitan atención clínica. Los equipos también orientan a las familias sobre alimentación infantil.</p></article>
-<article><h3>3. ¿Por qué es tan importante el agua?</h3><p>Vivir junto al Nilo no garantiza acceso a agua potable. La formación mostró cómo un sistema de bombeo solar permite extraer, tratar y distribuir agua. El agua segura y la higiene reducen el riesgo de enfermedades. El acceso al agua también puede facilitar el cultivo de alimentos.</p></article>
-<article><h3>4. ACH hace mucho más que repartir alimentos</h3><p>La respuesta combina nutrición, agua e higiene, protección y recuperación de medios de vida. Puede incluir espacios de apoyo psicosocial para mujeres desplazadas o ayudas y formación para recuperar ingresos y pequeños negocios.</p></article>
-<article><h3>5. Detrás de cada cifra hay personas</h3><p>Hay familias que recorren largas distancias para encontrar atención y comunidades que intentan reconstruir su vida. La inseguridad, los permisos y el transporte dificultan el acceso humanitario. Los socios ayudan a que Acción contra el Hambre mantenga su labor y pueda responder a las emergencias.</p></article>
-<h3>Ejemplo para utilizar en la calle</h3><blockquote>En Sudán hay millones de personas que han tenido que huir de sus casas por la guerra y que necesitan ayuda. Acción contra el Hambre trata la desnutrición infantil, facilita agua potable y ayuda a las familias a recuperar sus medios de vida. Buscamos socios para que la organización pueda seguir realizando este trabajo y respondiendo a las emergencias.</blockquote>
-<h3>Tres cosas que recordar</h3><ul><li><strong>El problema.</strong> La guerra dificulta el acceso a alimentos, agua y servicios básicos.</li><li><strong>La respuesta.</strong> ACH trata la desnutrición, previene enfermedades y ayuda a las familias a recuperar su autonomía.</li><li><strong>Nuestro papel.</strong> Conseguir socios para sostener ese trabajo.</li></ul>
-<button class="print" type="button" id="print-summary">Imprimir o guardar el resumen como PDF</button></section>
-<section id="infografia">
+<a class="skip" href="#resumen">Saltar al contenido</a>
+<div class="top"><div class="wrap"><a class="brand" href="#portada">Ágora</a><nav aria-label="Secciones"><ul><li><a href="#resumen">Capítulos</a></li><li><a href="#infografia">Esquema</a></li><li><a href="#test">Test</a></li><li><a href="#materiales">Materiales</a></li></ul></nav></div></div>
+<header class="hero" id="portada">
+<figure><img src="https://assets.science.nasa.gov/dynamicimage/assets/science/esd/eo/images/imagerecords/5000/5514/ISS010E23451_lrg.jpg" alt="Vista desde la Estación Espacial Internacional de la confluencia del Nilo Blanco y el Nilo Azul en Jartum" fetchpriority="high" referrerpolicy="no-referrer"><figcaption>Jartum, 2005 · <a href="https://science.nasa.gov/earth/earth-observatory/khartoum-sudan-5514/">NASA / JSC</a></figcaption></figure>
+<div class="wrap hero-body"><p class="kicker">Formación · 13 de noviembre de 2026</p><h1>Sudán 2026</h1><p class="lead">Detrás de cada cifra hay una vida</p><p class="context">Material de repaso de Ágora Fundraising a partir de la formación de Acción contra el Hambre.</p><a class="button" href="#resumen">Explorar la formación <span aria-hidden="true">↓</span></a></div>
+</header>
+<main>
+<section id="resumen"><div class="wrap">
+<h2>Resumen de la formación</h2><ol class="chapter-nav" aria-label="Capítulos"><li><a href="#capitulo-1">La crisis</a></li><li><a href="#capitulo-2">Nutrición</a></li><li><a href="#capitulo-3">Agua</a></li><li><a href="#capitulo-4">La respuesta</a></li><li><a href="#capitulo-5">Los socios</a></li></ol><div class="chapters">
+<article class="chapter" id="capitulo-1"><div class="chapter-mark" aria-hidden="true">01<small>Contexto</small></div><div><h3>¿Qué está pasando en Sudán?</h3><p class="stat"><strong>33,7 millones</strong><span>de personas necesitan ayuda · OMS, febrero de 2026</span></p><p>Sudán lleva en guerra desde abril de 2023. Según el análisis de la OMS de febrero de 2026, <strong>33,7 millones de personas necesitan ayuda</strong>. Millones han tenido que huir, dejando atrás hogares, trabajos y tierras. Muchas familias también tienen dificultades para conseguir agua segura y atención médica.</p></div></article>
+<article class="chapter" id="capitulo-2"><div class="chapter-mark" aria-hidden="true">02<small>Nutrición</small></div><div><h3>¿Cómo ayuda ACH a los niños con desnutrición?</h3><p>En la formación conocimos el centro de estabilización de Kosti. Los equipos usan una cinta que mide el perímetro del brazo para ayudar a detectar la desnutrición. Según la evaluación, pueden utilizar alimentos terapéuticos como Plumpy’Nut. Los casos con complicaciones necesitan atención clínica. Los equipos también orientan a las familias sobre alimentación infantil.</p></div></article>
+<article class="chapter" id="capitulo-3"><div class="chapter-mark" aria-hidden="true">03<small>Agua segura</small></div><div><h3>¿Por qué es tan importante el agua?</h3><p>Vivir junto al Nilo no garantiza acceso a agua potable. La formación mostró cómo un sistema de bombeo solar permite extraer, tratar y distribuir agua. El agua segura y la higiene reducen el riesgo de enfermedades. El acceso al agua también puede facilitar el cultivo de alimentos.</p></div></article>
+<article class="chapter" id="capitulo-4"><div class="chapter-mark" aria-hidden="true">04<small>Recuperación</small></div><div><h3>ACH hace mucho más que repartir alimentos</h3><p>La respuesta combina nutrición, agua e higiene, protección y recuperación de medios de vida. Puede incluir espacios de apoyo psicosocial para mujeres desplazadas o ayudas y formación para recuperar ingresos y pequeños negocios.</p></div></article>
+<article class="chapter" id="capitulo-5"><div class="chapter-mark" aria-hidden="true">05<small>Captación</small></div><div><h3>Detrás de cada cifra hay personas</h3><p>Hay familias que recorren largas distancias para encontrar atención y comunidades que intentan reconstruir su vida. La inseguridad, los permisos y el transporte dificultan el acceso humanitario. Los socios ayudan a que Acción contra el Hambre mantenga su labor y pueda responder a las emergencias.</p></div></article>
+</div><aside class="street"><h3>Ejemplo para utilizar en la calle</h3><blockquote>En Sudán hay millones de personas que han tenido que huir de sus casas por la guerra y que necesitan ayuda. Acción contra el Hambre trata la desnutrición infantil, facilita agua potable y ayuda a las familias a recuperar sus medios de vida. Buscamos socios para que la organización pueda seguir realizando este trabajo y respondiendo a las emergencias.</blockquote></aside>
+<h3 style="margin-top:2rem">Tres cosas que recordar</h3><ul class="memory"><li><strong>El problema.</strong> La guerra dificulta el acceso a alimentos, agua y servicios básicos.</li><li><strong>La respuesta.</strong> ACH trata la desnutrición, previene enfermedades y ayuda a las familias a recuperar su autonomía.</li><li><strong>Nuestro papel.</strong> Conseguir socios para sostener ese trabajo.</li></ul>
+<button class="print" type="button" id="print-summary">Imprimir o guardar el resumen como PDF</button></div></section>
+<section class="band" id="infografia"><div class="wrap">
 <h2>Infografía</h2><p class="pending">Infografía definitiva pendiente. Este esquema resume la relación entre el conflicto, el hambre y la respuesta.</p>
 <ol class="flow"><li><strong>Conflicto y desplazamiento.</strong> Las familias pueden perder su hogar, sus ingresos o sus cultivos.</li><li><strong>Menos acceso a servicios.</strong> Se dificulta conseguir alimentos, agua segura y atención sanitaria.</li><li><strong>Hambre y enfermedad.</strong> La desnutrición aumenta la vulnerabilidad a las infecciones, y las infecciones pueden empeorar el estado nutricional.</li><li><strong>Respuesta combinada.</strong> Los equipos acercan la atención nutricional, mejoran el acceso a agua segura y apoyan la recuperación de ingresos.</li></ol>
-</section>
-<section id="test">
+</div></section>
+<section class="quiz" id="test"><div class="wrap">
 <h2>Cuestionario de repaso</h2>
-<p>Responde las diez preguntas para ver tu puntuación y la explicación de cada respuesta.</p>
-<form id="quiz"><div id="questions"></div>
+<p class="section-intro">Responde las diez preguntas para ver tu puntuación y la explicación de cada respuesta.</p>
+<form id="quiz"><div class="progress-head"><label for="quiz-progress">Preguntas respondidas</label><strong id="progress-count" aria-live="polite">0 / 10</strong></div><progress class="meter" id="quiz-progress" max="10" value="0"></progress><div id="questions"></div>
 <p id="result" tabindex="-1" role="status" hidden></p>
-<div class="actions"><button type="submit">Corregir</button><button type="reset">Volver a empezar</button></div></form>
+<div class="actions"><button type="submit">Corregir</button><button type="reset" class="secondary">Volver a empezar</button></div></form>
 <noscript>Activa JavaScript para hacer el cuestionario.</noscript>
-</section>
-<section id="materiales">
+</div></section>
+<section id="materiales"><div class="wrap">
 <h2>Materiales de la formación</h2>
 <!-- Para activar un material, copia su plantilla a la sección, añade src al visor o reproductor y href al enlace de descarga cuando corresponda. Usa una ruta relativa al archivo público autorizado. -->
-<article id="presentacion"><h3>Presentación de Acción contra el Hambre</h3><p class="pending">Pendiente de la presentación oficial para habilitar el visor y la descarga.</p></article>
-<article id="audio"><h3>Grabación de audio</h3><p class="pending">Pendiente de incorporar una copia de la grabación para su reproducción pública.</p></article>
-<article id="video"><h3>Vídeo resumen</h3><p class="pending">Pendiente de la edición del vídeo resumen.</p></article>
-</section>
+<div class="material-grid"><article id="presentacion"><p class="kicker">PDF</p><h3>Presentación de Acción contra el Hambre</h3><p class="pending">Pendiente de la presentación oficial para habilitar el visor y la descarga.</p></article>
+<article id="audio"><p class="kicker">Audio</p><h3>Grabación de audio</h3><p class="pending">Pendiente de incorporar una copia de la grabación para su reproducción pública.</p></article>
+<article id="video"><p class="kicker">Vídeo</p><h3>Vídeo resumen</h3><p class="pending">Pendiente de la edición del vídeo resumen.</p></article>
+</div></div></section>
 <template id="pdf-player"><iframe title="Presentación oficial de ACH" height="550"></iframe><a download>Descargar presentación</a></template><template id="audio-player"><audio controls preload="none" aria-label="Grabación de la formación"></audio></template><template id="video-player"><video controls playsinline preload="none" aria-label="Vídeo de la formación"></video></template></main>
-<footer class="wrap"><h2>Fuentes</h2><p>Formación del 13 de noviembre de 2026, consultada mediante las notas de la grabación en Plaud.</p><ul>
+<footer><div class="wrap"><h2>Fuentes</h2><p>Formación del 13 de noviembre de 2026, consultada mediante las notas de la grabación en Plaud.</p><ul>
 <li><a href="https://www.actionagainsthunger.org/location/africa/sudan/">Acción contra el Hambre · Respuesta en Sudán</a></li>
 <li><a href="https://www.who.int/news/item/12-10-2026-ipc-sudan-food-insecurity-and-malnutrition-alert">OMS · Alerta de inseguridad alimentaria y desnutrición en Sudán</a></li>
 <li><a href="https://www.who.int/publications/m/item/public-health-situation-analysis---sudan-conflict-and-complex-emergency">OMS · Análisis de salud pública y cifra de personas que necesitan ayuda</a></li><li><a href="https://www.unicef.org/supply/mid-upper-arm-circumference-muac-measuring-tapes">UNICEF · Cinta de perímetro braquial</a></li><li><a href="https://www.unicef.org/supply/ready-use-therapeutic-food-rutf">UNICEF · Alimentos terapéuticos</a></li><li><a href="https://www.unicef.org/emergencies/emergency-response-sudan">UNICEF · Respuesta de emergencia en Sudán</a></li>
-</ul></footer>
+</ul></div></footer>
 <script>
 document.querySelector("#print-summary").addEventListener("click", () => window.print());
 const questions = [
@@ -72,6 +83,9 @@ const form = document.querySelector('#quiz');
 const result = document.querySelector('#result');
 const container = document.querySelector('#questions');
 const feedback = [];
+const progress = document.querySelector("#quiz-progress");
+const progressCount = document.querySelector("#progress-count");
+const fields = [];
 questions.forEach(([question, options], index) => {
   const field = document.createElement('fieldset');
   const legend = document.createElement('legend');
@@ -92,15 +106,27 @@ questions.forEach(([question, options], index) => {
   explanation.hidden = true;
   feedback.push(explanation);
   field.append(explanation);
+  fields.push(field);
   container.append(field);
 });
 
 function clearResults() {
   result.hidden = true;
   feedback.forEach(item => { item.hidden = true; });
+  container.querySelectorAll(".correct, .incorrect").forEach(label => label.classList.remove("correct", "incorrect"));
 }
-form.addEventListener('change', clearResults);
-form.addEventListener('reset', clearResults);
+function updateProgress(count) {
+  progress.value = count;
+  progressCount.textContent = count + ' / ' + questions.length;
+}
+form.addEventListener('change', () => {
+  clearResults();
+  updateProgress([...new FormData(form)].length);
+});
+form.addEventListener('reset', () => {
+  clearResults();
+  updateProgress(0);
+});
 form.addEventListener('submit', event => {
   event.preventDefault();
   const answers = new FormData(form);
@@ -108,6 +134,9 @@ form.addEventListener('submit', event => {
   questions.forEach(([, options, correct, explanation], index) => {
     const match = answers.get('q' + index) === String(correct);
     if (match) score++;
+    const labels = fields[index].querySelectorAll("label");
+    labels[correct].classList.add("correct");
+    if (!match) labels[Number(answers.get("q" + index))].classList.add("incorrect");
     const message = match ? 'Correcta. ' : 'Respuesta correcta: ' + options[correct] + ' ';
     feedback[index].textContent = message + explanation;
     feedback[index].hidden = false;
