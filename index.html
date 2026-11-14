@@ -68,11 +68,12 @@ body{font-family:Inter,"Segoe UI",system-ui,sans-serif}h1,h2,.hero .lead{font-fa
 @media(max-width:760px){.hero-layout,.chapter-layout{grid-template-columns:1fr}.chapter-layout .chapter-nav{position:static;display:flex}.hero img{aspect-ratio:16/9}.quick-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 .hero .button:hover{background:#254936;color:white}.hero figcaption{background:#203E30}.quick-grid a,.chapter-step a{min-height:44px}.chapter-step a{display:inline-flex;align-items:center}.faq-sources{margin-top:1.5rem}.faq-group summary:focus-visible{outline:3px solid #aa5b11}.quick-grid a{overflow-wrap:anywhere}#escuchar .audio-index{border-radius:0 0 .55rem .55rem}#escuchar #audio{border-radius:.55rem .55rem 0 0}
 .mini-audio{background:#E3E9DF;color:#203E30;border-top:1px solid #b8c8bf}.top .mini-audio .wrap{min-height:0;display:flex;flex-wrap:nowrap;padding-block:.2rem}.mini-audio #mini-title{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font-size:.85rem;font-weight:700}.mini-audio button{flex:none;padding:.25rem .65rem;min-height:44px;font-size:.85rem}.audio-active{scroll-padding-top:8rem}.card-options{display:flex;gap:.65rem;flex-wrap:wrap;justify-content:center}.card-options label{display:grid;gap:.2rem;text-align:left;font-weight:700;font-size:.85rem}.card-options select{font:inherit;color:var(--ink);background:var(--white);min-height:44px;border:1px solid var(--line);border-radius:.3rem;padding:.35rem}.quiz .feedback[data-outcome="correct"]{background:#edf5ec;border-color:#326454;color:#203e30}.quiz .feedback[data-outcome="incorrect"]{background:#f8e9e8;border-color:#a34f50;color:#652c2d}@media(max-width:360px){.audio-controls{column-gap:.25rem}.audio-controls :is(button,a){padding-inline:.25rem;font-size:.78rem}}
+.top .mini-audio .wrap{gap:.35rem}.mini-audio #mini-title{flex:1}.mini-audio #mini-close{min-width:44px;background:transparent;color:var(--deep);font-size:1.3rem}
 </style>
 </head>
 <body>
 <a class="skip" href="#resumen">Saltar al contenido</a>
-<div class="top"><div class="wrap"><a class="brand" href="#portada">Ágora</a><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menú</span></button><nav id="site-nav" aria-label="Secciones"><ul><li><a href="#resumen">Aprender</a></li><li><a href="#escuchar">Escuchar</a></li><li><a href="#consultar">Consultar</a></li><li><a href="#tarjetas">Practicar</a></li><li><a href="#materiales">Recursos</a></li></ul></nav></div><div class="mini-audio" hidden><div class="wrap"><span id="mini-title"></span><button type="button" id="mini-toggle">Pausar</button></div></div></div>
+<div class="top"><div class="wrap"><a class="brand" href="#portada">Ágora</a><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menú</span></button><nav id="site-nav" aria-label="Secciones"><ul><li><a href="#resumen">Aprender</a></li><li><a href="#escuchar">Escuchar</a></li><li><a href="#consultar">Consultar</a></li><li><a href="#tarjetas">Practicar</a></li><li><a href="#materiales">Recursos</a></li></ul></nav></div><div class="mini-audio" hidden><div class="wrap"><span id="mini-title"></span><button type="button" id="mini-toggle">Pausar</button><button type="button" id="mini-close" aria-label="Detener audio y cerrar reproductor">×</button></div></div></div>
 <header class="hero" id="portada"><div class="wrap hero-layout">
 
 <div class="hero-body"><p class="kicker">Formación · 13 de noviembre de 2026</p><h1>Sudán 2026</h1><p class="lead">Detrás de cada cifra hay una vida</p><p class="context">Material de repaso de Ágora Fundraising a partir de la formación de Acción contra el Hambre.</p><a class="button" id="start-learning" href="#resumen">Empezar formación <span aria-hidden="true">↓</span></a></div>
@@ -342,6 +343,11 @@ const audioStatus = document.querySelector('#audio-status');
 const mini = document.querySelector('.mini-audio');
 const miniTitle = document.querySelector('#mini-title');
 const miniToggle = document.querySelector('#mini-toggle');
+document.querySelector('#mini-close').addEventListener('click', () => {
+  audio.pause();
+  mini.hidden = true;
+  document.documentElement.classList.remove('audio-active');
+});
 let playingTitle = 'Grabación completa';
 function syncMini() {
   miniTitle.textContent=playingTitle;
