@@ -72,12 +72,7 @@ body{font-family:Inter,"Segoe UI",system-ui,sans-serif}h1,h2,.hero .lead{font-fa
 .chapter-photo{margin:1.15rem 0}.chapter-photo img{display:block;width:100%;height:auto;border-radius:.45rem}.chapter-photo figcaption{margin-top:.45rem;font-size:.86rem;line-height:1.45;color:var(--muted)}.chapter-photo figcaption span{display:block;margin-top:.2rem;font-size:.8rem}@media print{.chapter-photo{break-inside:avoid}}
 #galeria{background:var(--mint);padding:clamp(1rem,4vw,2rem);border-radius:.55rem;margin:1rem 0}.session-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}.session-gallery figure{margin:0}.session-gallery figure:first-child{grid-column:1/-1}.session-gallery a,.session-gallery img{display:block;width:100%;border-radius:.4rem}.session-gallery img{height:auto}.session-gallery figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}@media(max-width:340px){.session-gallery{grid-template-columns:1fr}}.session-video{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:.4rem;background:var(--deep)}
 .chapter-layout{display:block;max-width:780px;margin-inline:auto}.top #site-nav li{min-width:0}@media(min-width:901px){.top #site-nav ul{flex-wrap:nowrap;gap:clamp(.55rem,1.35vw,1.25rem)}.top #site-nav a{white-space:nowrap;font-size:.88rem}.chapter-links-start{border-inline-start:1px solid #74958a;padding-inline-start:.7rem}}html.audio-active{scroll-padding-top:8rem}
-@media(max-width:900px){
-  .top{transition:top .18s ease}
-  .top.header-hidden:not(:has(.header-main :focus-visible)){top:calc(-1 * var(--header-row-height,0px) - 1px)}
-  .top.header-reveal{transition:none}
-}
-@media(prefers-reduced-motion:reduce){.top{transition:none}}
+
 video.session-video{height:auto}</style>
 </head>
 <body>
@@ -563,44 +558,14 @@ window.addEventListener('scroll', () => {
 updateActiveLinks(sectionLinks);
 updateActiveLinks(chapterLinks);
 
-const pageHeader = document.querySelector('.top');
-const headerRow = pageHeader.querySelector('.header-main');
-new ResizeObserver(() => {
-  pageHeader.style.setProperty('--header-row-height', headerRow.getBoundingClientRect().height + 'px');
-}).observe(headerRow);
-
-let scrollTurn = Math.max(0, window.scrollY);
-let lastScroll = scrollTurn;
-let scrollDirection = 0;
-function revealHeader() {
-  pageHeader.classList.add('header-reveal');
-  pageHeader.classList.remove('header-hidden');
-}
-function updateMobileHeader() {
+let menuScrollStart = 0;
+menu.addEventListener('click', () => { menuScrollStart = window.scrollY; });
+window.addEventListener('scroll', () => {
+  if (!smallScreen.matches || menu.getAttribute('aria-expanded') !== 'true') return;
   const y = Math.max(0, window.scrollY);
-  const direction = Math.sign(y - lastScroll);
-  if (direction && direction !== scrollDirection) {
-    scrollTurn = lastScroll;
-    scrollDirection = direction;
-  }
-  lastScroll = y;
-  if (!smallScreen.matches || y <= 12 || menu.getAttribute('aria-expanded') === 'true') {
-    scrollTurn = y;
-    revealHeader();
-  } else if (direction < 0 && scrollTurn - y >= 6) {
-    revealHeader();
-  } else if (direction > 0 && y > 100 && y - scrollTurn >= 22) {
-    pageHeader.classList.remove('header-reveal');
-    pageHeader.classList.add('header-hidden');
-  }
-}
-window.addEventListener('scroll', updateMobileHeader, {passive:true});
-smallScreen.addEventListener('change', updateMobileHeader);
-menu.addEventListener('click', revealHeader);
-window.addEventListener('hashchange', () => {
-  revealHeader();
-  scrollTurn = Math.max(0, window.scrollY);
-});
+  menuScrollStart = Math.max(menuScrollStart, y);
+  if (menuScrollStart - y >= 8) closeMenu(nav.contains(document.activeElement));
+}, {passive:true});
 </script>
 </body>
 </html>
