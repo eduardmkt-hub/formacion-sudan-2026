@@ -72,11 +72,17 @@ body{font-family:Inter,"Segoe UI",system-ui,sans-serif}h1,h2,.hero .lead{font-fa
 .chapter-photo{margin:1.15rem 0}.chapter-photo img{display:block;width:100%;height:auto;border-radius:.45rem}.chapter-photo figcaption{margin-top:.45rem;font-size:.86rem;line-height:1.45;color:var(--muted)}.chapter-photo figcaption span{display:block;margin-top:.2rem;font-size:.8rem}@media print{.chapter-photo{break-inside:avoid}}
 #galeria{background:var(--mint);padding:clamp(1rem,4vw,2rem);border-radius:.55rem;margin:1rem 0}.session-gallery{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.85rem}.session-gallery figure{margin:0}.session-gallery figure:first-child{grid-column:1/-1}.session-gallery a,.session-gallery img{display:block;width:100%;border-radius:.4rem}.session-gallery img{height:auto}.session-gallery figcaption{font-size:.85rem;color:var(--muted);margin-top:.3rem}@media(max-width:340px){.session-gallery{grid-template-columns:1fr}}.session-video{display:block;width:100%;aspect-ratio:16/9;border:0;border-radius:.4rem;background:var(--deep)}
 .chapter-layout{display:block;max-width:780px;margin-inline:auto}.top #site-nav li{min-width:0}@media(min-width:901px){.top #site-nav ul{flex-wrap:nowrap;gap:clamp(.55rem,1.35vw,1.25rem)}.top #site-nav a{white-space:nowrap;font-size:.88rem}.chapter-links-start{border-inline-start:1px solid #74958a;padding-inline-start:.7rem}}html.audio-active{scroll-padding-top:8rem}
+@media(max-width:900px){
+  .top{transition:top .18s ease}
+  .top.header-hidden:not(:has(.header-main :focus-visible)){top:calc(-1 * var(--header-row-height,0px) - 1px)}
+  .top.header-reveal{transition:none}
+}
+@media(prefers-reduced-motion:reduce){.top{transition:none}}
 </style>
 </head>
 <body>
 <a class="skip" href="#resumen">Saltar al contenido</a>
-<div class="top"><div class="wrap"><a class="brand" href="#portada">Ágora</a><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menú</span></button><nav id="site-nav" aria-label="Secciones"><ul><li><a href="#resumen">Aprender</a></li><li><a href="#escuchar">Escuchar</a></li><li><a href="#consultar">Consultar</a></li><li><a href="#tarjetas">Practicar</a></li><li><a href="#materiales">Recursos</a></li><li class="chapter-links-start"><a href="#capitulo-1">La crisis</a></li><li><a href="#capitulo-2">Nutrición</a></li><li><a href="#capitulo-3">Agua</a></li><li><a href="#capitulo-4">La respuesta</a></li><li><a href="#capitulo-5">Los socios</a></li></ul></nav></div><div class="mini-audio" hidden><div class="wrap"><span id="mini-title"></span><button type="button" id="mini-toggle">Pausar</button><button type="button" id="mini-close" aria-label="Detener audio y cerrar reproductor">×</button></div></div></div>
+<div class="top"><div class="wrap header-main"><a class="brand" href="#portada">Ágora</a><button type="button" class="menu-toggle" aria-expanded="false" aria-controls="site-nav" hidden><svg aria-hidden="true" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.65" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"/></svg><span>Menú</span></button><nav id="site-nav" aria-label="Secciones"><ul><li><a href="#resumen">Aprender</a></li><li><a href="#escuchar">Escuchar</a></li><li><a href="#consultar">Consultar</a></li><li><a href="#tarjetas">Practicar</a></li><li><a href="#materiales">Recursos</a></li><li class="chapter-links-start"><a href="#capitulo-1">La crisis</a></li><li><a href="#capitulo-2">Nutrición</a></li><li><a href="#capitulo-3">Agua</a></li><li><a href="#capitulo-4">La respuesta</a></li><li><a href="#capitulo-5">Los socios</a></li></ul></nav></div><div class="mini-audio" hidden><div class="wrap"><span id="mini-title"></span><button type="button" id="mini-toggle">Pausar</button><button type="button" id="mini-close" aria-label="Detener audio y cerrar reproductor">×</button></div></div></div>
 <header class="hero" id="portada"><div class="wrap hero-layout">
 
 <div class="hero-body"><p class="kicker">Formación · 13 de noviembre de 2026</p><h1>Sudán 2026</h1><p class="lead">Detrás de cada cifra hay una vida</p><p class="context">Material de repaso de Ágora Fundraising a partir de la formación de Acción contra el Hambre.</p><a class="button" id="start-learning" href="#resumen">Empezar formación <span aria-hidden="true">↓</span></a></div>
@@ -556,6 +562,45 @@ window.addEventListener('scroll', () => {
 },{passive:true});
 updateActiveLinks(sectionLinks);
 updateActiveLinks(chapterLinks);
+
+const pageHeader = document.querySelector('.top');
+const headerRow = pageHeader.querySelector('.header-main');
+new ResizeObserver(() => {
+  pageHeader.style.setProperty('--header-row-height', headerRow.getBoundingClientRect().height + 'px');
+}).observe(headerRow);
+
+let scrollTurn = Math.max(0, window.scrollY);
+let lastScroll = scrollTurn;
+let scrollDirection = 0;
+function revealHeader() {
+  pageHeader.classList.add('header-reveal');
+  pageHeader.classList.remove('header-hidden');
+}
+function updateMobileHeader() {
+  const y = Math.max(0, window.scrollY);
+  const direction = Math.sign(y - lastScroll);
+  if (direction && direction !== scrollDirection) {
+    scrollTurn = lastScroll;
+    scrollDirection = direction;
+  }
+  lastScroll = y;
+  if (!smallScreen.matches || y <= 12 || menu.getAttribute('aria-expanded') === 'true') {
+    scrollTurn = y;
+    revealHeader();
+  } else if (direction < 0 && scrollTurn - y >= 6) {
+    revealHeader();
+  } else if (direction > 0 && y > 100 && y - scrollTurn >= 22) {
+    pageHeader.classList.remove('header-reveal');
+    pageHeader.classList.add('header-hidden');
+  }
+}
+window.addEventListener('scroll', updateMobileHeader, {passive:true});
+smallScreen.addEventListener('change', updateMobileHeader);
+menu.addEventListener('click', revealHeader);
+window.addEventListener('hashchange', () => {
+  revealHeader();
+  scrollTurn = Math.max(0, window.scrollY);
+});
 </script>
 </body>
 </html>
